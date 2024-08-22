@@ -14,8 +14,6 @@ pmsensor_table <- aqspec_html %>%
   separate_wider_delim(col = FieldMAE, delim = " to ", names = c("FieldMAElo", "FieldMAEhi"), too_few = "align_end") %>%
   separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start")
   # TODO change "~0.0" value to "0.0" in FieldR2lo
-
-pmsensor_table
   # TODO change empty items to NA
   # TODO Assign the correct data types to all variables
 
