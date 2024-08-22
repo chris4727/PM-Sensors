@@ -10,8 +10,9 @@ colnames <- c("Make", "Est. Cost ($)", "Pollutant", "Field R2", "Field MAE (µg/
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
-  select(c(X2,X3,X4,X5,X8,X9)) %>% 
-  filter(!row_number() %in% 1) # TODO Remove current columnheaders, replace with row 1 or colnames
+  select(Make = X2,Cost = X3,Pollutant = X4,FieldR2 = X5,FieldMAE = X8,LabMAE = X9) %>% 
+  filter(!row_number() %in% 1)
+# TODO Separate FieldR2 into low and high https://tidyr.tidyverse.org/reference/separate.html
 
 pmsensor_table
 colnames
