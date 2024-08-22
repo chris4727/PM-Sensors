@@ -12,10 +12,6 @@ pmsensor_table <- aqspec_html %>%
 # TODO Separate FieldR2 into low and high https://tidyr.tidyverse.org/reference/separate.html
 
 pmsensor_table
-colnames
-
-as.vector(pmsensor_table)
-pmsensor_table %>% filter()
 
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
