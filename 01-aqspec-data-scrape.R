@@ -16,6 +16,8 @@ pmsensor_table <- aqspec_html %>%
   # TODO change "~0.0" value to "0.0" in FieldR2lo
 
 pmsensor_table
+  # TODO change empty items to NA
+  # TODO Assign the correct data types to all variables
 
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
