@@ -9,8 +9,8 @@ pmsensor_table <- aqspec_html %>%
   html_table() %>% .[[1]] %>%
   select(Make = X2,Cost = X3,Pollutant = X4,FieldR2 = X5,FieldMAE = X8,LabMAE = X9) %>% 
   filter(!row_number() %in% c(1,2) & Pollutant == "PM2.5") %>%
-  select(!Pollutant)
-# TODO Separate FieldR2 into low and high https://tidyr.tidyverse.org/reference/separate.html
+  select(!Pollutant) %>%
+  separate_wider_delim(col = FieldR2, delim = " to ", names = c("FieldR2lo", "FieldR2hi"), too_few = "align_start")
 
 pmsensor_table
 
