@@ -4,8 +4,6 @@ pacman::p_load(pacman, rvest, dplyr, magrittr, tibble) # Load packages with pacm
 
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
 
-colnames <- c("Make", "Est. Cost ($)", "Pollutant", "Field R2", "Field MAE (µg/m3)", "Lab MAE (µg/m3)")
-
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
