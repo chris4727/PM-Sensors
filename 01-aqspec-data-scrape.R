@@ -10,10 +10,10 @@ pmsensor_table <- aqspec_html %>%
   select(Make = X2,Cost = X3,Pollutant = X4,FieldR2 = X5,FieldMAE = X8,LabMAE = X9) %>% 
   filter(!row_number() %in% c(1,2) & Pollutant == "PM2.5") %>%
   select(!Pollutant) %>%
-  separate_wider_delim(col = FieldR2, delim = " to ", names = c("FieldR2lo", "FieldR2hi"), too_few = "align_start")
+  separate_wider_delim(col = FieldR2, delim = " to ", names = c("FieldR2lo", "FieldR2hi"), too_few = "align_start") %>%
+  separate_wider_delim(col = FieldMAE, delim = " to ", names = c("FieldMAElo", "FieldMAEhi"), too_few = "align_end") %>%
+  separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start")
   # TODO change "~0.0" value to "0.0" in FieldR2lo
-  # TODO Separate FieldMAE and LabMAE into lo and hi https://tidyr.tidyverse.org/reference/separate.html
-  # TODO convert FieldR2, FieldMAE, and LabMAE lo and hi into numbers
 
 pmsensor_table
 
