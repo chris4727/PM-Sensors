@@ -12,7 +12,10 @@ pmsensor_table <- aqspec_html %>%
   select(!Pollutant) %>%
   separate_wider_delim(col = FieldR2, delim = " to ", names = c("FieldR2lo", "FieldR2hi"), too_few = "align_start") %>%
   separate_wider_delim(col = FieldMAE, delim = " to ", names = c("FieldMAElo", "FieldMAEhi"), too_few = "align_start") %>%
-  separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start")
+  separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start") %>%
+  mutate(FieldMAElo = na_if(FieldMAElo, "")) %>%
+  mutate(LabMAElo = na_if(LabMAElo, ""))
+  
   # TODO change "~0.0" value to "0.0" in FieldR2lo
   # TODO change empty items to NA
   # TODO Assign the correct data types to all variables
