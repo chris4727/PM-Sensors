@@ -2,8 +2,7 @@ rm(list=ls()) # Start with a clean environment
 
 pacman::p_load(pacman, rvest, dplyr, magrittr, tibble) # Load packages with pacman
 
-aqspec_url <- "https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm"
-aqspec_html <- read_html(aqspec_url)
+aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
 
 colnames <- c("Make", "Est. Cost ($)", "Pollutant", "Field R2", "Field MAE (µg/m3)", "Lab MAE (µg/m3)")
 
