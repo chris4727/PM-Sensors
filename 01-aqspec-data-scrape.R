@@ -17,6 +17,10 @@ pmsensor_table <- aqspec_html %>%
   # TODO change empty items to NA
   # TODO Assign the correct data types to all variables
 
+vis_dat(pmsensor_table) # Visualize datatypes
+vis_miss(pmsensor_table) # Visualize missing values
+
+
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
 cat("\014") # Clear console. Same as Ctrl+L
