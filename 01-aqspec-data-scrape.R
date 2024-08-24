@@ -34,6 +34,9 @@ pmsensor_table %>%
   tab_header(title = md("AQ-SPEC $PM_{2.5}$ Sensors"),
              subtitle = md("Sensors with a field $R^2$ of at least 0.7 compared to a reference monitor")) %>%
   # TODO Get the title to render PM2.5 and R2 without math font
+  tab_source_note(md("**Source:** South Coast AQMD’s AQ-SPEC program [PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm)")) %>% 
+  # TODO Programmatically insert the link the data was pulled from
+  # TODO Programmatically include the date acessed
   cols_label(Make ~ "{{PM_2.5}} Sensor Model",
              FieldR2lo ~ "Field {{R^2}} low",
              FieldR2hi ~ "Field {{R^2}} High") %>%
