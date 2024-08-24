@@ -38,11 +38,13 @@ pmsensor_table %>%
   tab_source_note(md("**Source:** [South Coast AQMD’s AQ-SPEC program PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm)")) %>% 
   # TODO Programmatically insert the link the data was pulled from
   # TODO Programmatically include the date acessed
-  tab_spanner(label = "Field {{R^2}}",
-              columns = FieldR2lo:FieldR2hi) %>% 
-  cols_label(Make ~ "{{PM_2.5}} Sensor Model",
-             FieldR2lo ~ "Low",
-             FieldR2hi ~ "High") #%>%
+  tab_spanner(
+    label = "Field {{R^2}}",
+    columns = FieldR2lo:FieldR2hi) %>%
+  cols_label(
+    Make ~ "{{PM_2.5}} Sensor Model",
+    FieldR2lo ~ "Low",
+    FieldR2hi ~ "High") #%>%
   gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
 
