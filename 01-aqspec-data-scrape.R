@@ -2,8 +2,10 @@ rm(list=ls()) # Start with a clean environment
 #install.packages("tidyverse")
 pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras, viridis) # Load packages with pacman
 
+# Pull AQ-Spec website data
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
 
+# Create table from website html and format data
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
