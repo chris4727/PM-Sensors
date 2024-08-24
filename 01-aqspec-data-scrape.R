@@ -18,7 +18,12 @@ pmsensor_table <- aqspec_html %>%
   
 # Create a table to view the data
 pmsensor_table %>%
-  gt()
+  filter(FieldR2lo >= 0.7) %>%
+  arrange(desc(FieldR2lo),Cost) %>%
+  select(Make, Cost, FieldR2lo, FieldR2hi) %>%
+  gt() %>%
+  tab_header(md("$PM_{2.5}$ Sensors with a Field $R^{2}$ of at least 0.7")) %>% 
+  gt_theme_nytimes()
 
   # TODO change "~0.0" value to "0.0" in FieldR2lo
   #   str_replace("~", "")
