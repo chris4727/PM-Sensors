@@ -16,6 +16,10 @@ pmsensor_table <- aqspec_html %>%
   mutate(FieldMAElo = na_if(FieldMAElo, "")) %>%
   mutate(LabMAElo = na_if(LabMAElo, ""))
   
+# Create a table to view the data
+pmsensor_table %>%
+  gt()
+
   # TODO change "~0.0" value to "0.0" in FieldR2lo
   # TODO change empty items to NA
   # TODO Assign the correct data types to all variables
