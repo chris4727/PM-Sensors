@@ -5,7 +5,7 @@ pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras,
 # Pull AQ-Spec website data
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
 
-# Create table from website html and format data
+# Create dataframe from website html and format data
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
@@ -17,6 +17,13 @@ pmsensor_table <- aqspec_html %>%
   separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start") %>%
   mutate(FieldMAElo = na_if(FieldMAElo, "")) %>%
   mutate(LabMAElo = na_if(LabMAElo, ""))
+  # TODO change "~0.0" value to "0.0" in FieldR2lo
+  #   str_replace("~", "")
+  # TODO Assign the correct data types to all variables
+
+# Visualise data
+vis_dat(pmsensor_table) # Visualize datatypes
+vis_miss(pmsensor_table) # Visualize missing values
   
 # Create a table to view the data
 pmsensor_table %>%
@@ -26,18 +33,9 @@ pmsensor_table %>%
   gt() %>%
   tab_header(md("$PM_{2.5}$ Sensors with a Field $R^{2}$ of at least 0.7")) %>% 
   gt_theme_nytimes()
-# TODO Apply viridis color palette field to the cost column
+  # TODO Apply viridis color palette field to the cost column
 
 # TODO Create a plot of Cost vs FieldR2lo
-
-  # TODO change "~0.0" value to "0.0" in FieldR2lo
-  #   str_replace("~", "")
-  # TODO change empty items to NA
-  # TODO Assign the correct data types to all variables
-
-vis_dat(pmsensor_table) # Visualize datatypes
-vis_miss(pmsensor_table) # Visualize missing values
-
 
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
