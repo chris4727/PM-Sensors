@@ -31,7 +31,8 @@ pmsensor_table %>%
   arrange(desc(FieldR2lo),Cost) %>%
   select(Make, Cost, FieldR2lo, FieldR2hi) %>%
   gt() %>%
-  tab_header(md("$PM_{2.5}$ Sensors with a Field $R^{2}$ of at least 0.7")) %>%
+  tab_header(title = md("AQ-Spec $PM_{2.5}$ Sensors"),
+             subtitle = md("Sensors with a field $R^2$ of at least 0.7")) %>%
   # TODO Get the title to render PM2.5 and R2 without math font
   cols_label(Make ~ "{{PM_2.5}} Sensor Model",
              FieldR2lo ~ "Field {{R^2}} low",
