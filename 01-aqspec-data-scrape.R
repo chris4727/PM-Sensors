@@ -1,6 +1,6 @@
 rm(list=ls()) # Start with a clean environment
 #install.packages("tidyverse")
-pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras) # Load packages with pacman
+pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras, viridis) # Load packages with pacman
 
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
 
@@ -24,6 +24,9 @@ pmsensor_table %>%
   gt() %>%
   tab_header(md("$PM_{2.5}$ Sensors with a Field $R^{2}$ of at least 0.7")) %>% 
   gt_theme_nytimes()
+# TODO Apply viridis color palette field to the cost column
+
+# TODO Create a plot of Cost vs FieldR2lo
 
   # TODO change "~0.0" value to "0.0" in FieldR2lo
   #   str_replace("~", "")
