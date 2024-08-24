@@ -21,6 +21,7 @@ pmsensor_table %>%
   gt()
 
   # TODO change "~0.0" value to "0.0" in FieldR2lo
+  #   str_replace("~", "")
   # TODO change empty items to NA
   # TODO Assign the correct data types to all variables
 
