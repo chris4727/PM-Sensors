@@ -1,5 +1,5 @@
 rm(list=ls()) # Start with a clean environment
-
+#install.packages("tidyverse")
 pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras) # Load packages with pacman
 
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
