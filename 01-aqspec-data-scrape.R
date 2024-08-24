@@ -31,11 +31,11 @@ pmsensor_table %>%
   arrange(desc(FieldR2lo),Cost) %>%
   select(Make, Cost, FieldR2lo, FieldR2hi) %>%
   gt() %>%
-  tab_source_note(md("**Source:** South Coast AQMD’s AQ-SPEC program [PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm)")) %>% 
   tab_header(
     title = html("AQ-SPEC PM<sub>2.5</sub> Sensors"),
     subtitle = md("Sensors with a field R^2^ of at least 0.7 compared to a reference monitor")) %>%
   # TODO The md() function renders "PM~2.5~" as strikethrough. Bug? Using html as workaround.
+  tab_source_note(md("**Source:** [South Coast AQMD’s AQ-SPEC program PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm)")) %>% 
   # TODO Programmatically insert the link the data was pulled from
   # TODO Programmatically include the date acessed
   tab_spanner(label = "Field {{R^2}}",
