@@ -33,9 +33,9 @@ pmsensor_table %>%
   gt() %>%
   tab_header(md("$PM_{2.5}$ Sensors with a Field $R^{2}$ of at least 0.7")) %>%
   # TODO Get the title to render PM2.5 and R2 without math font
-  cols_label(Make ~ "{{PM_2.5}} Sensor Model") %>%
-  cols_label(FieldR2lo ~ "Field {{R^2}} low") %>%
-  cols_label(FieldR2hi ~ "Field {{R^2}} High") %>%
+  cols_label(Make ~ "{{PM_2.5}} Sensor Model",
+             FieldR2lo ~ "Field {{R^2}} low",
+             FieldR2hi ~ "Field {{R^2}} High") %>%
   gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
 
