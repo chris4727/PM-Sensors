@@ -41,6 +41,9 @@ pmsensor_table %>%
   tab_spanner(
     label = "Field {{R^2}}",
     columns = FieldR2lo:FieldR2hi) %>%
+  tab_footnote(
+    footnote = md("The coefficient of determination (R^2^) is a statistical parameter measuring the degree of relation between two variables. Here, it measures the linear relationship between the sensor and the Federal Reference Method (FRM), or Federal Equivalent Method (FEM), or Best Available Technology (BAT) reference instrument. An R^2^ approaching the value of 1 reflects a near perfect correlation, whereas a value of 0 indicates a complete lack of correlation. All R^2^ values reported in these reports are based either on 5-min or 1-hr average data."),
+    locations = cells_column_spanners(spanners = everything())) %>% 
   cols_label(
     Make ~ "{{PM_2.5}} Sensor Model",
     FieldR2lo ~ "Low",
