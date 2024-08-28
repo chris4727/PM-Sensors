@@ -25,6 +25,8 @@ pmsensor_table <- aqspec_html %>%
     labmaehi = as.numeric(pmsensor_table$labmaehi),
     )
 
+pmsensor_table
+
 # Visualise data
 vis_dat(pmsensor_table) # Visualize datatypes
 vis_miss(pmsensor_table) # Visualize missing values
@@ -58,6 +60,9 @@ pmsensor_table %>%
     fieldr2hi ~ "High"
     ) %>%
   fmt_currency(
+    columns = cost,
+    currency = "USD"
+    ) %>% 
   gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
 
