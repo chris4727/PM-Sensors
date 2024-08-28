@@ -73,7 +73,9 @@ pmsensor_table %>%
   #geom_smooth()+
   # Method = Linear Model, Standard Error = False
   # TODO Do linear regression to get the R2 of this comparison
-  geom_smooth(method = lm, se = F) +
+  geom_smooth(
+    method = lm, 
+    se = F) +
   labs(title = "Field R2 vs Cost of PM2.5 Sensors",
        x = "Cost (USD)",
        y = "Field R2"
