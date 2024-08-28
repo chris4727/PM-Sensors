@@ -9,17 +9,17 @@ aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-poll
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
-  select(Make = X2,Cost = X3,Pollutant = X4,FieldR2 = X5,FieldMAE = X8,LabMAE = X9) %>% 
-  filter(!row_number() %in% c(1,2) & Pollutant == "PM2.5") %>%
-  select(!Pollutant) %>%
-  separate_wider_delim(col = FieldR2, delim = " to ", names = c("FieldR2lo", "FieldR2hi"), too_few = "align_start") %>%
-  separate_wider_delim(col = FieldMAE, delim = " to ", names = c("FieldMAElo", "FieldMAEhi"), too_few = "align_start") %>%
-  separate_wider_delim(col = LabMAE, delim = " to ", names = c("LabMAElo", "LabMAEhi"), too_few = "align_start") %>%
   mutate(FieldMAElo = na_if(FieldMAElo, "")) %>%
   mutate(LabMAElo = na_if(LabMAElo, ""))
   # TODO change "~0.0" value to "0.0" in FieldR2lo
   #   str_replace("~", "")
   # TODO Assign the correct data types to all variables
+  select(make = X2,cost = X3,pollutant = X4,fieldr2 = X5,fieldmae = X8,labmae = X9) %>% 
+  filter(!row_number() %in% c(1,2) & pollutant == "PM2.5") %>%
+  select(!pollutant) %>%
+  separate_wider_delim(col = fieldr2, delim = " to ", names = c("fieldr2lo", "fieldr2hi"), too_few = "align_start") %>%
+  separate_wider_delim(col = fieldmae, delim = " to ", names = c("fieldmaelo", "fieldmaehi"), too_few = "align_start") %>%
+  separate_wider_delim(col = labmae, delim = " to ", names = c("labmaelo", "labmaehi"), too_few = "align_start") %>%
 
 # Visualise data
 vis_dat(pmsensor_table) # Visualize datatypes
