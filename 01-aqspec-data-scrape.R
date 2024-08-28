@@ -1,6 +1,6 @@
 rm(list=ls()) # Start with a clean environment
 #install.packages("tidyverse")
-pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras, viridis) # Load packages with pacman
+pacman::p_load(pacman, rvest, tidyr, dplyr, magrittr, stringr, visdat, gtExtras, ggplot2, viridis) # Load packages with pacman
 
 # Pull AQ-Spec website data
 aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm")
@@ -66,7 +66,10 @@ pmsensor_table %>%
   gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
 
-# TODO Create a plot of Cost vs FieldR2lo
+# Create a plot of Cost vs FieldR2lo
+pmsensor_table %>% 
+  ggplot(aes(cost,fieldr2lo)) +
+  geom_point()
 
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
