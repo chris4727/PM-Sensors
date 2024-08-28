@@ -67,9 +67,18 @@ pmsensor_table %>%
   # TODO Apply viridis color palette field to the cost column
 
 # Create a plot of Cost vs FieldR2lo
-pmsensor_table %>% 
+pmsensor_table %>%
   ggplot(aes(cost,fieldr2lo)) +
-  geom_point()
+  geom_point() +
+  #geom_smooth()+
+  # Method = Linear Model, Standard Error = False
+  # TODO Do linear regression to get the R2 of this comparison
+  geom_smooth(method = lm, se = F) +
+  labs(title = "Field R2 vs Cost of PM2.5 Sensors",
+       x = "Cost (USD)",
+       y = "Field R2"
+       )+
+  theme_minimal()
 
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
