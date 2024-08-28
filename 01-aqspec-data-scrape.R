@@ -9,17 +9,21 @@ aqspec_html <- read_html("https://www.aqmd.gov/aq-spec/evaluations/criteria-poll
 pmsensor_table <- aqspec_html %>% 
   html_elements(".telerik-reTable-1") %>%
   html_table() %>% .[[1]] %>%
-  mutate(FieldMAElo = na_if(FieldMAElo, "")) %>%
-  mutate(LabMAElo = na_if(LabMAElo, ""))
-  # TODO change "~0.0" value to "0.0" in FieldR2lo
-  #   str_replace("~", "")
-  # TODO Assign the correct data types to all variables
   select(make = X2,cost = X3,pollutant = X4,fieldr2 = X5,fieldmae = X8,labmae = X9) %>% 
   filter(!row_number() %in% c(1,2) & pollutant == "PM2.5") %>%
   select(!pollutant) %>%
   separate_wider_delim(col = fieldr2, delim = " to ", names = c("fieldr2lo", "fieldr2hi"), too_few = "align_start") %>%
   separate_wider_delim(col = fieldmae, delim = " to ", names = c("fieldmaelo", "fieldmaehi"), too_few = "align_start") %>%
   separate_wider_delim(col = labmae, delim = " to ", names = c("labmaelo", "labmaehi"), too_few = "align_start") %>%
+  mutate(
+    cost = as.numeric(gsub("[~\\$,]", "", pmsensor_table$cost)),
+    fieldr2lo = as.numeric(pmsensor_table$fieldr2lo),
+    fieldr2hi = as.numeric(pmsensor_table$fieldr2hi),
+    fieldmaelo = as.numeric(na_if(fieldmaelo, "")),
+    fieldmaehi = as.numeric(pmsensor_table$fieldmaehi),
+    labmaelo = as.numeric(na_if(labmaelo, "")),
+    labmaehi = as.numeric(pmsensor_table$labmaehi),
+    )
 
 # Visualise data
 vis_dat(pmsensor_table) # Visualize datatypes
