@@ -16,13 +16,13 @@ pmsensor_table <- aqspec_html %>%
   separate_wider_delim(col = fieldmae, delim = " to ", names = c("fieldmaelo", "fieldmaehi"), too_few = "align_start") %>%
   separate_wider_delim(col = labmae, delim = " to ", names = c("labmaelo", "labmaehi"), too_few = "align_start") %>%
   mutate(
-    cost = as.numeric(gsub("[~\\$,]", "", pmsensor_table$cost)),
-    fieldr2lo = as.numeric(pmsensor_table$fieldr2lo),
-    fieldr2hi = as.numeric(pmsensor_table$fieldr2hi),
+    cost = as.numeric(gsub("[~\\$,]", "", cost)),
+    fieldr2lo = as.numeric(fieldr2lo),
+    fieldr2hi = as.numeric(fieldr2hi),
     fieldmaelo = as.numeric(na_if(fieldmaelo, "")),
-    fieldmaehi = as.numeric(pmsensor_table$fieldmaehi),
+    fieldmaehi = as.numeric(fieldmaehi),
     labmaelo = as.numeric(na_if(labmaelo, "")),
-    labmaehi = as.numeric(pmsensor_table$labmaehi),
+    labmaehi = as.numeric(labmaehi),
     )
 
 pmsensor_table
@@ -65,6 +65,7 @@ pmsensor_table %>%
     ) %>% 
   gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
+
 
 # Create a plot of Cost vs FieldR2lo
 pmsensor_table %>%
