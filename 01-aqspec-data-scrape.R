@@ -77,9 +77,9 @@ pmsensor_table %>%
   geom_smooth(
     method = lm, 
     se = F) +
-  labs(title = "Field R2 vs Cost of PM2.5 Sensors",
+  labs(title = expression("Field R"^2~" vs Cost of PM"[2.5]*" Sensors"),
        x = "Cost (USD)",
-       y = "Field R2"
+       y = expression("Field R"[2])
        )+
   theme_minimal()
 
