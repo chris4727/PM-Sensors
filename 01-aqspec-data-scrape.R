@@ -83,6 +83,22 @@ pmsensor_table %>%
        )+
   theme_minimal()
 
+# Create a plot of Cost vs FieldMAElo
+pmsensor_table %>%
+  ggplot(aes(cost,fieldmaelo)) +
+  geom_point(aes(colour = fieldr2lo)) +
+  #geom_smooth()+
+  # Method = Linear Model, Standard Error = False
+  # TODO Do linear regression to get the R2 of this comparison
+  geom_smooth(
+    method = lm, 
+    se = F) +
+  labs(title = expression("Field MAE vs Cost of PM"[2.5]*" Sensors"),
+       x = "Cost (USD)",
+       y = "Field Mean Analytical Error (MAE)"
+       )+
+  theme_minimal()
+
 # Cleanup the environment
 dev.off()   # Clear plots if there is one
 cat("\014") # Clear console. Same as Ctrl+L
