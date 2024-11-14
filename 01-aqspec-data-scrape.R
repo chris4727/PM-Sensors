@@ -70,7 +70,7 @@ pmsensor_table %>%
 # Create a plot of Cost vs FieldR2lo
 pmsensor_table %>%
   ggplot(aes(cost,fieldr2lo)) +
-  geom_point() +
+  geom_point(aes(colour = fieldmaelo)) +
   #geom_smooth()+
   # Method = Linear Model, Standard Error = False
   # TODO Do linear regression to get the R2 of this comparison
