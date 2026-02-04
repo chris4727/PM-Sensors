@@ -1,5 +1,10 @@
 rm(list=ls()) # Start with a clean environment
+## Force precompiled V8 install to avoid error in gtExtras dependancy installation
+#Sys.setenv(DOWNLOAD_STATIC_LIBV8 = 1)
+#install.packages("V8")
+#install.packages("gtExtras")
 library(tidyverse)
+library(gtExtras)
 theme_set(theme_minimal())
 
 pmsensor_table <- read_csv("./data/pmsensors_2026-02-03.csv")
