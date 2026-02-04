@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+
+
+</head>
+<body>
+<div id="pmsensors" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  <style>@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#pmsensors table {
+  font-family: Cairo, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pmsensors thead, #pmsensors tbody, #pmsensors tfoot, #pmsensors tr, #pmsensors td, #pmsensors th {
+  border-style: none;
+}
+
+#pmsensors p {
+  margin: 0;
+  padding: 0;
+}
+
+#pmsensors .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 3px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pmsensors .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pmsensors .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pmsensors .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pmsensors .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pmsensors .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pmsensors .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pmsensors .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pmsensors .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pmsensors .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pmsensors .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pmsensors .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pmsensors .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pmsensors .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pmsensors .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+#pmsensors .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pmsensors .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pmsensors .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pmsensors .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pmsensors .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pmsensors .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pmsensors .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pmsensors .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pmsensors .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pmsensors .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pmsensors .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pmsensors .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pmsensors .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pmsensors .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pmsensors .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pmsensors .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pmsensors .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pmsensors .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pmsensors .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pmsensors .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pmsensors .gt_left {
+  text-align: left;
+}
+
+#pmsensors .gt_center {
+  text-align: center;
+}
+
+#pmsensors .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pmsensors .gt_font_normal {
+  font-weight: normal;
+}
+
+#pmsensors .gt_font_bold {
+  font-weight: bold;
+}
+
+#pmsensors .gt_font_italic {
+  font-style: italic;
+}
+
+#pmsensors .gt_super {
+  font-size: 65%;
+}
+
+#pmsensors .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pmsensors .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pmsensors .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pmsensors .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pmsensors .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pmsensors .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pmsensors .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#pmsensors .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#pmsensors div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+
+#pmsensors tbody tr:last-child {
+  border-bottom: 2px solid #ffffff00;
+}
+</style>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="5" class="gt_heading gt_title gt_font_normal" style="font-family: Chivo; font-weight: 700;">AQ-SPEC PM<sub>2.5</sub> Sensors</td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="font-family: Chivo; font-weight: 300;"><span class='gt_from_md'>Sensors with a field R<sup>2</sup> of at least 0.7 compared to a reference monitor</span></td>
+    </tr>
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="model">PM<span style="white-space:nowrap;"><sub style="line-height:0;">2.5</sub></span> Sensor Model</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="cost">Cost (USD)</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Field {{R^2}}">
+        <div class="gt_column_spanner">Field R<span style="white-space:nowrap;"><sup style="line-height:0;">2</sup></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></div>
+      </th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="fieldmaelo">Field MAE<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="fieldr2lo">Low</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-top-width: 0px; border-top-style: solid; border-top-color: black; font-family: Chivo; font-size: 14px; vertical-align: bottom; font-weight: 200; text-transform: uppercase;" scope="col" id="fieldr2hi">High</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="model" class="gt_row gt_left">PurpleAir (PA-II)</td>
+<td headers="cost" class="gt_row gt_right">$200.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.93</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.97</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">GGSensors (TAM)</td>
+<td headers="cost" class="gt_row gt_right">$7,999.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.92</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">5.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Elitech (Temtop LKC-1000S+)</td>
+<td headers="cost" class="gt_row gt_right">$140.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.91</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.92</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.1</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Sensirion (Nubo) Discontinued</td>
+<td headers="cost" class="gt_row gt_right">$2,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.91</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.7</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">PurpleAir (PA-I)</td>
+<td headers="cost" class="gt_row gt_right">$150.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.90</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.92</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Air Quality Egg (2024 Model)</td>
+<td headers="cost" class="gt_row gt_right">$1,914.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.89</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.2</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Atmotube (Pro)</td>
+<td headers="cost" class="gt_row gt_right">$162.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.88</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.9</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Air Quality Egg (2022 Model)</td>
+<td headers="cost" class="gt_row gt_right">$671.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.88</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.90</td>
+<td headers="fieldmaelo" class="gt_row gt_right">6.0</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Kunak (Air Lite)</td>
+<td headers="cost" class="gt_row gt_right">$5,033.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.88</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.90</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.1</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Tera Sensor (NextPM)</td>
+<td headers="cost" class="gt_row gt_right">$70.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.87</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.95</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.9</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">A.U.G. Signals Ltd (AirSENCE Standard AS400X)</td>
+<td headers="cost" class="gt_row gt_right">$4,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.87</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.88</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Qingping (Air Monitor)</td>
+<td headers="cost" class="gt_row gt_right">$135.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.86</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.90</td>
+<td headers="fieldmaelo" class="gt_row gt_right">1.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Applied Particle Technology (MINIMA)</td>
+<td headers="cost" class="gt_row gt_right">$995.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.86</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.89</td>
+<td headers="fieldmaelo" class="gt_row gt_right">5.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">SGS Galson (SmartSense)</td>
+<td headers="cost" class="gt_row gt_right">$1,995.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.86</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.88</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.6</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">QuantAQ (MODULAIR-PM; 2025 Evaluation)</td>
+<td headers="cost" class="gt_row gt_right">$2,495.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.86</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.93</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Kunak (Air Pro)</td>
+<td headers="cost" class="gt_row gt_right">$8,500.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.86</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.87</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Qingping (Air Monitor Lite)</td>
+<td headers="cost" class="gt_row gt_right">$96.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.85</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.93</td>
+<td headers="fieldmaelo" class="gt_row gt_right">1.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Air Quality Egg (2018 Model)</td>
+<td headers="cost" class="gt_row gt_right">$249.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.84</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.85</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">PAMAir (Airmazing PAS-OA-320-3G)</td>
+<td headers="cost" class="gt_row gt_right">$500.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.84</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.86</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">QuantAQ (MODULAIR-PM)</td>
+<td headers="cost" class="gt_row gt_right">$1,295.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.84</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.88</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.0</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Aeroqual (AQY v0.5) Discontinued</td>
+<td headers="cost" class="gt_row gt_right">$3,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.84</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.87</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Oizom (Dustroid Pro V6)</td>
+<td headers="cost" class="gt_row gt_right">$6,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.84</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.93</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.1</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Airly</td>
+<td headers="cost" class="gt_row gt_right">$1,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.83</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.89</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.5</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Lunar Outpost (Canary-S)</td>
+<td headers="cost" class="gt_row gt_right">$1,070.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.83</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.3</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Sensirion (SEN44)</td>
+<td headers="cost" class="gt_row gt_right">$53.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.82</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.9</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Edimax (Edigreen Home)</td>
+<td headers="cost" class="gt_row gt_right">$299.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.82</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.83</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.3</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Moji China (Airnut)</td>
+<td headers="cost" class="gt_row gt_right">$150.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.81</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.88</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Kaiterra (Laser Egg 2+)</td>
+<td headers="cost" class="gt_row gt_right">$199.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.81</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.85</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.3</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">HabitatMap (AirBeam3)</td>
+<td headers="cost" class="gt_row gt_right">$249.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.81</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.90</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.6</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">TSI (AirAssure)</td>
+<td headers="cost" class="gt_row gt_right">$1,500.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.81</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.83</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Sensirion (SPS30)</td>
+<td headers="cost" class="gt_row gt_right">$100.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.80</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.83</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.0</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Shinyei (PM Evaluation Kit)</td>
+<td headers="cost" class="gt_row gt_right">$1,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.80</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.89</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Igienair (Zaack AQI)</td>
+<td headers="cost" class="gt_row gt_right">$3,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.80</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.82</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Met One (ES-405)</td>
+<td headers="cost" class="gt_row gt_right">$5,200.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.80</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.92</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.5</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Air Quality Egg (Ver. 2)</td>
+<td headers="cost" class="gt_row gt_right">$240.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.79</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.85</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Liveable Cities (SLX-PM)</td>
+<td headers="cost" class="gt_row gt_right">$954.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.79</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.83</td>
+<td headers="fieldmaelo" class="gt_row gt_right">6.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">SailBri Cooper (SCI-901)</td>
+<td headers="cost" class="gt_row gt_right">$5,500.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.79</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.89</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.2</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">PurpleAir (PA-II-FLEX)</td>
+<td headers="cost" class="gt_row gt_right">$299.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.78</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.88</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">AS-LUNG (Portable)</td>
+<td headers="cost" class="gt_row gt_right">$1,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.78</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">6.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Elitech (Temtop M2000 2nd Generation)</td>
+<td headers="cost" class="gt_row gt_right">$100.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.77</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.82</td>
+<td headers="fieldmaelo" class="gt_row gt_right">2.1</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Sensirion (SEN54)</td>
+<td headers="cost" class="gt_row gt_right">$23.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.76</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.77</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.5</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Fablab (Smart Citizen Kit v2.1)</td>
+<td headers="cost" class="gt_row gt_right">$119.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.76</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.77</td>
+<td headers="fieldmaelo" class="gt_row gt_right">8.3</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">PM Monitor (iMonPM)</td>
+<td headers="cost" class="gt_row gt_right">$1,995.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.76</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.89</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Aeroqual (AQY v1.0)</td>
+<td headers="cost" class="gt_row gt_right">$4,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.76</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.81</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.2</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Oizom (Polludrone Smart)</td>
+<td headers="cost" class="gt_row gt_right">$8,000.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.76</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.81</td>
+<td headers="fieldmaelo" class="gt_row gt_right">5.4</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">PurpleAir (PA-I-Indoor)</td>
+<td headers="cost" class="gt_row gt_right">$180.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.75</td>
+<td headers="fieldr2hi" class="gt_row gt_right">NA</td>
+<td headers="fieldmaelo" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Davis Instruments (Airlink)</td>
+<td headers="cost" class="gt_row gt_right">$179.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.74</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.81</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.9</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Redspira</td>
+<td headers="cost" class="gt_row gt_right">$180.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.73</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.87</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.7</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Clarity (Node)</td>
+<td headers="cost" class="gt_row gt_right">$1,300.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.73</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.76</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.0</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Sensirion (Nubo Air)</td>
+<td headers="cost" class="gt_row gt_right">$1,700.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.73</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.83</td>
+<td headers="fieldmaelo" class="gt_row gt_right">5.2</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Magnasci SRL (uRADMonitor A3 HW105)</td>
+<td headers="cost" class="gt_row gt_right">$500.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.72</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.81</td>
+<td headers="fieldmaelo" class="gt_row gt_right">5.2</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">SainSmart (Pure MorningP3)</td>
+<td headers="cost" class="gt_row gt_right">$170.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.71</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.74</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Strop de aer</td>
+<td headers="cost" class="gt_row gt_right">$175.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.71</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.77</td>
+<td headers="fieldmaelo" class="gt_row gt_right">6.3</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Elitech (Temtop PMD 351)</td>
+<td headers="cost" class="gt_row gt_right">$960.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.71</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.74</td>
+<td headers="fieldmaelo" class="gt_row gt_right">3.8</td></tr>
+    <tr><td headers="model" class="gt_row gt_left">Magnasci SRL (uRADMonitor INDUSTRIAL HW103)</td>
+<td headers="cost" class="gt_row gt_right">$1,300.00</td>
+<td headers="fieldr2lo" class="gt_row gt_right">0.70</td>
+<td headers="fieldr2hi" class="gt_row gt_right">0.78</td>
+<td headers="fieldmaelo" class="gt_row gt_right">4.1</td></tr>
+  </tbody>
+  <tfoot>
+    <tr class="gt_footnotes">
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class='gt_from_md'>The coefficient of determination (R<sup>2</sup>) is a statistical parameter measuring the degree of relation between two variables. Here, it measures the linear relationship between the sensor and the Federal Reference Method (FRM), or Federal Equivalent Method (FEM), or Best Available Technology (BAT) reference instrument. An R<sup>2</sup> approaching the value of 1 reflects a near perfect correlation, whereas a value of 0 indicates a complete lack of correlation. All R<sup>2</sup> values reported in these reports are based either on 5-min or 1-hr average data.</span></td>
+    </tr>
+    <tr class="gt_footnotes">
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> <span class='gt_from_md'>The field Mean Absolute Error (MAE) is is the absolute difference between the sensors and the reference instruments. The larger MAE values, the higher measurement errors as compared to the reference instruments.</span></td>
+    </tr>
+    <tr class="gt_sourcenotes">
+      <td class="gt_sourcenote" colspan="5"><span class='gt_from_md'><strong>Source:</strong> <a href="https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm">South Coast AQMD’s AQ-SPEC program PM Sensor Evaluations</a> Accessed 2026-02-03</span></td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</body>
+</html>
