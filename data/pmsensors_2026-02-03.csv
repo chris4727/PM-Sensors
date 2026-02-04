@@ -1,0 +1,97 @@
+model,cost,pollutant,fieldr2lo,fieldr2hi,fieldmaelo,fieldmaehi
+SGS Galson (SmartSense),1995,PM2.5,0.86,0.88,2.6,3.3
+Aeroqual (AQY-R),5000,PM2.5,0.66,0.81,2.9,5.1
+Aeroqual (AQY v0.5) Discontinued,3000,PM2.5,0.84,0.87,NA,NA
+Aeroqual (AQY v1.0),4000,PM2.5,0.76,0.81,4.2,5.3
+Aeroqual (S500-PM),1490,PM2.5,0.46,0.67,4.4,6.2
+Airly,1000,PM2.5,0.83,0.89,4.5,5
+Air Quality Egg (2018 Model),249,PM2.5,0.84,0.85,4.4,5.3
+Air Quality Egg (Ver. 2),240,PM2.5,0.79,0.85,NA,NA
+Air Quality Egg (2022 Model),671,PM2.5,0.88,0.9,6,7.1
+AirThinx (IAQ),1000,PM2.5,0.54,0.57,4.8,5
+Airviz Inc. (Speck),150,PM2.5,0.32,NA,NA,NA
+Alphasense (OPC-N2),310,PM2.5,0.65,0.8,NA,NA
+Alphasense (OPC-N3),338,PM2.5,0.52,0.67,7.1,9.2
+Alphasense (OPC-R2),435,PM2.5,0.67,0.78,7.3,10
+Applied Particle Technology (MINIMA),995,PM2.5,0.86,0.89,5.8,6.5
+"AQMesh (v3.0 PM, v5.1 Gas)",7800,PM2.5,0.47,0.79,2.7,7.5
+AS-LUNG (Air Quality Station),2199,PM2.5,0.59,0.81,8,12.1
+AS-LUNG (Portable),1000,PM2.5,0.78,NA,6.8,8.2
+Atmotube (Pro),162,PM2.5,0.88,NA,4.9,5.9
+Atmocube,800,PM2.5,0.65,0.66,5.3,6.5
+A.U.G. Signals Ltd (AirSENCE Standard AS400X),4000,PM2.5,0.87,0.88,3.4,3.8
+Aurassure (Trust Lite),525,PM2.5,0.65,0.66,5,5.3
+Blues Wireless (Airnote),149,PM2.5,0.67,0.75,4.4,7.1
+Clarity (Node),1300,PM2.5,0.73,0.76,3,3.4
+Davis Instruments (Airlink),179,PM2.5,0.74,0.81,4.9,5.9
+Dylos (DC1700-PM),475,PM2.5,0.58,0.68,24.3,28.5
+Ecowitt (WH415B),100,PM2.5,0.35,0.47,8.2,15.4
+Ecomesure (EcomSmart),4550,PM2.5,0.54,0.74,7,9.6
+Edimax (AirBox),249,PM2.5,0.61,0.87,4.4,5.5
+Edimax (Edigreen Home),299,PM2.5,0.82,0.83,3.3,4.4
+Elitech (Temtop LKC-1000S+),140,PM2.5,0.91,0.92,3.1,3.6
+Elitech (Temtop M2000 2nd Generation),100,PM2.5,0.77,0.82,2.1,3.2
+Elitech (Temtop P20),70,PM2.5,0.42,0.87,3.8,6.1
+Elitech (Temtop PMD 351),960,PM2.5,0.71,0.74,3.8,5.8
+Fablab (Smart Citizen Kit v2.1),119,PM2.5,0.76,0.77,8.3,10.7
+Foobot,200,PM2.5,0.55,NA,NA,NA
+GGSensors (TAM),7999,PM2.5,0.92,NA,5.4,5.7
+HabitatMap (AirBeam),200,PM2.5,0.65,0.7,15.6,29
+HabitatMap (AirBeam2),250,PM2.5,0.63,0.75,3.3,3.7
+HabitatMap (AirBeam3),249,PM2.5,0.81,0.9,3.6,5.3
+Hanvon (Hanvon N1),200,PM2.5,0.52,0.79,NA,NA
+Igienair (Zaack AQI),3000,PM2.5,0.8,0.82,3.8,4.2
+IQAir (AirVisual Outdoor),289,PM2.5,0.54,0.65,4.4,6
+IQAir (AirVisual Pro),270,PM2.5,0.69,0.73,4.4,4.7
+IQAir (AirVisual Pro FW1.1683),270,PM2.5,0.63,0.81,3.5,5.5
+Kaiterra (Laser Egg 2+),199,PM2.5,0.81,0.85,3.3,4
+Kunak (Air A10),3000,PM2.5,0.69,0.75,5.4,6.4
+Kunak (Air Lite),5033,PM2.5,0.88,0.9,2.1,2.8
+Kunak (Air Pro),8500,PM2.5,0.86,0.87,2.4,2.5
+Liveable Cities (SLX-PM),954,PM2.5,0.79,0.83,6.4,9.1
+Lunar Outpost (Canary-S),1070,PM2.5,0.83,NA,3.3,3.8
+Magnasci SRL (uRADMonitor A3 HW105),500,PM2.5,0.72,0.81,5.2,8.9
+Magnasci SRL (uRADMonitor INDUSTRIAL HW103),1300,PM2.5,0.7,0.78,4.1,8.1
+Magnasci SRL (uRADMonitor SMOGGIE-PM v1.101),110,PM2.5,0.6,0.81,2.1,2.8
+Met One (E-Sampler),5500,PM2.5,0.55,0.62,10.9,15.2
+Met One (ES-405),5200,PM2.5,0.8,0.92,3.5,4
+Met One (Neighborhood Monitor),1900,PM2.5,0.53,0.67,6,8.4
+Moji China (Airnut),150,PM2.5,0.81,0.88,NA,NA
+Oizom (Dustroid Pro V6),6000,PM2.5,0.84,0.93,2.1,4.8
+Oizom (Polludrone Smart),8000,PM2.5,0.76,0.81,5.4,6.1
+Origins (Laser Egg),200,PM2.5,0.58,NA,NA,NA
+PAMAir (Airmazing PAS-OA-320-3G),500,PM2.5,0.84,0.86,3.8,4
+Piera Systems (Canaree R1),299,PM2.5,0.69,0.9,6.3,7.2
+Plume Labs (Flow 2),199,PM2.5,0.01,0.13,7.3,10.6
+PM Monitor (iMonPM),1995,PM2.5,0.76,0.89,3.4,4.3
+PurpleAir (PA-I),150,PM2.5,0.9,0.92,NA,NA
+PurpleAir (PA-I-Indoor),180,PM2.5,0.75,NA,NA,NA
+PurpleAir (PA-II),200,PM2.5,0.93,0.97,NA,NA
+PurpleAir (PA-II-FLEX),299,PM2.5,0.78,0.88,3.4,3.8
+Qingping (Air Monitor),135,PM2.5,0.86,0.9,1.8,2.3
+Qingping (Air Monitor Lite),96,PM2.5,0.85,0.93,1.8,3.6
+QuantAQ (MODULAIR-PM),1295,PM2.5,0.84,0.88,4,5.2
+Redspira,180,PM2.5,0.73,0.87,4.7,7.1
+RTI (MicroPEM),2000,PM2.5,0.65,0.9,6.4,8.3
+SailBri Cooper (SCI-901),5500,PM2.5,0.79,0.89,2.2,3.1
+SainSmart (Pure MorningP3),170,PM2.5,0.71,0.74,4.8,5.4
+SamyoungS&C (SY-DS-DK3),100,PM2.5,0.6,0.62,4.8,11.4
+Sensirion (Nubo) Discontinued,2000,PM2.5,0.91,NA,4.7,5.2
+Sensirion (Nubo Air),1700,PM2.5,0.73,0.83,5.2,6.5
+Sensirion (SEN44),53,PM2.5,0.82,NA,2.9,3
+Sensirion (SEN54),23,PM2.5,0.76,0.77,3.5,NA
+Sensirion (SPS30),100,PM2.5,0.8,0.83,2,5.1
+Shinyei (PM Evaluation Kit),1000,PM2.5,0.8,0.89,NA,NA
+Strop de aer,175,PM2.5,0.71,0.77,6.3,8.8
+Tera Sensor (NextPM),70,PM2.5,0.87,0.95,3.9,5.6
+TSI (AirAssure),1500,PM2.5,0.81,0.83,NA,NA
+TSI (BlueSky),400,PM2.5,0.65,0.76,4.9,5.9
+uHoo,300,PM2.5,0,NA,9.5,17.8
+Air Quality Egg (2024 Model),1914,PM2.5,0.89,NA,4.2,4.3
+HabitatMap (AirBeam Mini),99,PM2.5,0.64,NA,3.1,3.3
+Airthings Space Pro,385,PM2.5,0.44,0.49,5.4,8.3
+Cubic Sensors & Instruments PM2012SE-B,45,PM2.5,0.59,0.63,4.9,5
+Strop de Aer PM-Ultimate,250,PM2.5,0.59,0.6,4.6,4.7
+QuantAQ (MODULAIR-PM; 2025 Evaluation),2495,PM2.5,0.86,0.93,4.4,5.3
+Bettair (Static Node MK2 Series),6330,PM2.5,0.48,0.54,4.5,5
+IKEA Vindstyrka,60,PM2.5,0.66,0.67,5.1,5.5
