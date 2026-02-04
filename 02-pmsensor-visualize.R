@@ -78,10 +78,10 @@ pmsensor_table1 %>%
 #  gtsave(filename = "./output/pmsensor_table1.png", expand = 10)
 
 # Create a plot of Cost vs FieldR2lo
-pmsensor_table %>%
-  ggplot(aes(cost,fieldr2lo))
+pmsensors %>%
+  ggplot(aes(x = cost,
+             y = fieldr2lo)) +
   geom_point(aes(colour = fieldmaelo)) +
-  #geom_smooth()+
   # Method = Linear Model, Standard Error = False
   # TODO Do linear regression to get the R2 of this comparison
   geom_smooth(
@@ -90,8 +90,9 @@ pmsensor_table %>%
   labs(title = expression("Field R"^2~" vs Cost of PM"[2.5]*" Sensors"),
        x = "Cost (USD)",
        y = expression("Field R"[2])
-       )+
-  theme_minimal()
+       )
+
+
 
 # Create a plot of Cost vs FieldMAElo
 pmsensor_table %>%
