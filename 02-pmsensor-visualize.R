@@ -16,10 +16,13 @@ glimpse(pmsensor_table)
 View(pmsensor_table)
 names(pmsensor_table)
 pmsensor_table
+gt_plt_summary(pmsensor_table)
 
 # Visualise data with "visdat" package
 vis_dat(pmsensor_table) # Visualize datatypes
 vis_miss(pmsensor_table) # Visualize missing values
+
+
 
 #------------------------------------------------------------------------
 # 2026-02-03 Git all code working with new AQ-SPEC table up to this point
