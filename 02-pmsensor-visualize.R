@@ -71,6 +71,11 @@ pmsensor_table1 <- pmsensors %>%
   # TODO Apply viridis color palette field to the cost column
   gt_theme_538()
 
+# Save the resulting table
+pmsensor_table1 %>%
+  gtsave(filename = "./output/pmsensor_table1.html")
+#pmsensor_table1 %>%
+#  gtsave(filename = "./output/pmsensor_table1.png", expand = 10)
 
 # Create a plot of Cost vs FieldR2lo
 pmsensor_table %>%
