@@ -32,37 +32,44 @@ pmsensors <- pmsensor_table %>%
   filter(fieldr2lo >= 0.7)
 
 # Create a table to view the data
+pmsensor_table1 <- pmsensors %>% 
   arrange(desc(fieldr2lo),cost) %>%
-  select(make, cost, fieldr2lo, fieldr2hi) %>%
-  gt() %>%
+  select(model, cost, fieldr2lo, fieldr2hi, fieldmaelo) %>%
+  gt(id = "pmsensors") %>% 
+  # Add title
   tab_header(
     title = html("AQ-SPEC PM<sub>2.5</sub> Sensors"),
     subtitle = md("Sensors with a field R^2^ of at least 0.7 compared to a reference monitor")
-    ) %>%
+    ) %>% 
   # TODO The md() function renders "PM~2.5~" as strikethrough. Bug? Using html as workaround.
-  tab_source_note(md("**Source:** [South Coast AQMD’s AQ-SPEC program PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm)")) %>% 
+  tab_source_note(md(glue("**Source:** [South Coast AQMD’s AQ-SPEC program PM Sensor Evaluations](https://www.aqmd.gov/aq-spec/evaluations/criteria-pollutants/summary-pm) Accessed {updated}"))) %>% 
   # TODO Programmatically insert the link the data was pulled from
   # TODO Programmatically include the date accessed
   tab_spanner(
     label = "Field {{R^2}}",
     columns = fieldr2lo:fieldr2hi
-    ) %>%
+    ) %>% 
   tab_footnote(
     footnote = md("The coefficient of determination (R^2^) is a statistical parameter measuring the degree of relation between two variables. Here, it measures the linear relationship between the sensor and the Federal Reference Method (FRM), or Federal Equivalent Method (FEM), or Best Available Technology (BAT) reference instrument. An R^2^ approaching the value of 1 reflects a near perfect correlation, whereas a value of 0 indicates a complete lack of correlation. All R^2^ values reported in these reports are based either on 5-min or 1-hr average data."),
     locations = cells_column_spanners(spanners = everything())
     ) %>% 
+  tab_footnote(
+    footnote = md("The field Mean Absolute Error (MAE) is is the absolute difference between the sensors and the reference instruments. The larger MAE values, the higher measurement errors as compared to the reference instruments."),
+    locations = cells_column_labels(columns = fieldmaelo)
+    ) %>% 
   cols_label(
-    make ~ "{{PM_2.5}} Sensor Model",
-    cost ~ "Cost",
+    model ~ "{{PM_2.5}} Sensor Model",
+    cost ~ "Cost (USD)",
     fieldr2lo ~ "Low",
-    fieldr2hi ~ "High"
+    fieldr2hi ~ "High",
+    fieldmaelo ~ "Field MAE"
     ) %>%
   fmt_currency(
     columns = cost,
     currency = "USD"
     ) %>% 
-  gt_theme_nytimes()
   # TODO Apply viridis color palette field to the cost column
+  gt_theme_538()
 
 
 # Create a plot of Cost vs FieldR2lo
