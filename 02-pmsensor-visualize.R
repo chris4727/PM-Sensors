@@ -26,11 +26,12 @@ vis_miss(pmsensor_table) # Visualize missing values
 
 #------------------------------------------------------------------------
 # 2026-02-03 Git all code working with new AQ-SPEC table up to this point
-# [ ] Move table creation and data visualization to another script
+
+# Select only sensors with field R2 >= 0.7
+pmsensors <- pmsensor_table %>%
+  filter(fieldr2lo >= 0.7)
 
 # Create a table to view the data
-pmsensor_table %>%
-  filter(fieldr2lo >= 0.7) %>%
   arrange(desc(fieldr2lo),cost) %>%
   select(make, cost, fieldr2lo, fieldr2hi) %>%
   gt() %>%
