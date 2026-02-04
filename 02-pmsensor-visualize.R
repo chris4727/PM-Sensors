@@ -7,7 +7,9 @@ library(tidyverse)
 library(gtExtras)
 theme_set(theme_minimal())
 
-pmsensor_table <- read_csv("./data/pmsensors_2026-02-03.csv")
+updated <- "2026-02-03"
+glue("./data/pmsensors_{Sys.Date()}.csv")
+pmsensor_table <- read_csv(glue("./data/pmsensors_{updated}.csv"))
 
 # Explore data
 glimpse(pmsensor_table)
